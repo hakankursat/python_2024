@@ -1,12 +1,12 @@
 import time
-print("""*************************************************************
+print("""*************************************
 
 THE PROGRAM FOR SAVING USER INFORMATION
 
 TO ENTER THE PROGRAM, ENTER SOMETHING OTHER THAN 'q'.
 ENTER 'q' TO EXIT.
 
-*************************************************************""")
+*************************************""")
 users_list = []
 
 while True:
