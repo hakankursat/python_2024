@@ -6,42 +6,46 @@ Write the Turkish translation of the words given in English.
 
 ********************************************""")
 
-word_list = ["Water","Computer","Pencil","Shirt","Mouse"]
-word_list_tr = ["Su","Bilgisayar","Kalem","Gömlek","Fare"]
+word_dict = {
+    "Nursery": "Kreş",
+    "Private": "Özel",
+    "Chimney": "Baca",
+    "Pencil": "Kalem",
+    "Knee": "Diz",
+    "Shoulder": "Omuz",
+    "Colleague": "Meslektaş",
+    "Mouse": "Fare",
+    "Shirt": "Gömlek",
+    "Computer": "Bilgisayar",
+}
 
-while True:
-    first_word = input("Water: ")
-    second_word = input("Computer: ")
-    third_word = input("Pencil: ")
-    fourth_word = input("Shirt: ")
-    fifth_word = input("Mouse: ")
+user_answers = []
+correct_answers = 0
+wrong_answers = 0
 
-    if first_word.lower() == "su":
-        print("1- CORRECT ANSWER!")
+
+for word in word_dict.keys():
+    answer = input("Write the Turkish translation of the '{}':".format(word))
+    user_answers.append((word, answer))
+
+
+for word, answer in user_answers:
+    correct_answer = word_dict[word]
+
+    if answer.lower() == correct_answer:
+        print("CORRECT ANSWER! '{}'".format(correct_answer))
+        correct_answers += 1
     else:
-        print("1- WRONG ANSWER! Answer is", word_list_tr[0])
+        print("WRONG ANSWER! Answer is '{}'".format(correct_answer))
+        wrong_answers += 1
 
-    if second_word.lower() == "bilgisayar":
-        print("2- CORRECT ANSWER!")
-    else:
-        print("2- WRONG ANSWER! Answer is", word_list_tr[1])
+print("""*************************************************
+RESULTS
 
-    if third_word.lower() == "kalem":
-        print("3- CORRECT ANSWER!")
-    else:
-        print("3- WRONG ANSWER! Answer is", word_list_tr[2])
+TOTAL CORRECT ANSWERS: {}
 
-    if fourth_word.lower() == "gömlek":
-        print("4- CORRECT ANSWER!")
-    else:
-        print("4- WRONG ANSWER! Answer is", word_list_tr[3])
-
-    if fifth_word.lower() == "fare":
-        print("5- CORRECT ANSWER!")
-    else:
-        print("5- WRONG ANSWER! Answer is", word_list_tr[4])
-
-    break
+TOTAL WRONG ANSWERS: {}
+*************************************************""".format(correct_answers,wrong_answers))
 
 
 
