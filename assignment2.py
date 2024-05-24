@@ -7,13 +7,11 @@ Write the Turkish translation of the words given in English.
 ********************************************""")
 
 word_dict = {
-    "Nursery": "Kreş",
     "Private": "Özel",
     "Chimney": "Baca",
     "Pencil": "Kalem",
     "Knee": "Diz",
     "Shoulder": "Omuz",
-    "Colleague": "Meslektaş",
     "Mouse": "Fare",
     "Shirt": "Gömlek",
     "Computer": "Bilgisayar",
@@ -32,7 +30,7 @@ for word in word_dict.keys():
 for word, answer in user_answers:
     correct_answer = word_dict[word]
 
-    if answer.lower() == correct_answer:
+    if answer.lower() == correct_answer.lower():
         print("CORRECT ANSWER! '{}'".format(correct_answer))
         correct_answers += 1
     else:
