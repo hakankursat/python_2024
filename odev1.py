@@ -1,13 +1,15 @@
 import time
-print("""*************************************
+import datetime
+print("""*******************************************************************************************
 
 THE PROGRAM FOR SAVING USER INFORMATION
 
 TO ENTER THE PROGRAM, ENTER SOMETHING OTHER THAN 'q'.
 ENTER 'q' TO EXIT.
 
-*************************************""")
+*******************************************************************************************""")
 users_list = []
+today_date = datetime.date.today()
 
 while True:
     choice = input("ENTER 'q' TO EXIT:")
@@ -18,7 +20,7 @@ while True:
         surname = input("Enter your surname:")
         job = input("Enter your job:")
         birthday_year = input("Enter your birthday year:")
-        age = 2024 - int(birthday_year)
+        age = today_date.year - int(birthday_year)
 
         user_info = {"Name": name,
                      "Surname": surname,
